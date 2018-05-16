@@ -17,11 +17,11 @@ unsigned long Sealib::SimpleRankSelect::rank(unsigned long k) const {
     if(bitset.size() <= k) {
         return boost::dynamic_bitset<>::npos;
     }
-    unsigned long rank = 0;
+    unsigned long srank = 0;
     for (unsigned long i = 0; i <= k; i++) {
-        if (bitset[i]) rank++;
+        if (bitset[i]) srank++;
     }
-    return rank;
+    return srank;
 }
 
 Sealib::SimpleRankSelect::SimpleRankSelect(const boost::dynamic_bitset<> &bitset_) : bitset(bitset_) {}
