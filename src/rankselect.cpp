@@ -5,6 +5,7 @@
 #include <boost/dynamic_bitset.hpp>
 #include <iostream>
 #include "sealib/rankselect.h"
+#include <tuple>
 
 Sealib::RankSelect::RankSelect(const boost::dynamic_bitset<> &bitset_) {
     segmentLength = calculateSegmentLength(bitset_.size());
@@ -27,7 +28,7 @@ Sealib::RankSelect::RankSelect(const boost::dynamic_bitset<> &bitset_) {
         localSelect.reserve(segmentLength);
         unsigned long segment;
         unsigned long beg = i * segmentLength;
-        boost::to_block_range(bitset_, make_tuple(beg, static_cast<unsigned long>(segmentLength), std::ref(segment)));
+        boost::to_block_range(bitset_, std::make_tuple(beg, static_cast<unsigned long>(segmentLength), &segment));
 
         for (unsigned char j = 0; j < segmentLength; j++) {
             if (CHECK_BIT(segment,j)) {
@@ -54,7 +55,7 @@ Sealib::RankSelect::RankSelect(const boost::dynamic_bitset<> &bitset_) {
 
         unsigned long segment;
         unsigned long beg = segmentCount * segmentLength;
-        boost::to_block_range(bitset_, make_tuple(beg, lastSeg, std::ref(segment)));
+        boost::to_block_range(bitset_, std::make_tuple(beg, lastSeg, &segment));
 
         for (unsigned char j = 0; j < lastSeg; j++) {
             if (CHECK_BIT(segment,j)) {

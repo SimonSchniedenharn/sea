@@ -4,10 +4,10 @@
 
 #ifndef SEA_DYCKVIEW_H
 #define SEA_DYCKVIEW_H
-#include <QGraphicsView>
-#include <QPolygonF>
-#include <QVector>
-#include <QTimer>
+#include "../../../../../../../usr/local/opt/qt/lib/QtWidgets.framework/Headers/QGraphicsView"
+#include "../../../../../../../usr/local/opt/qt/lib/QtGui.framework/Headers/QPolygonF"
+#include "../../../../../../../usr/local/opt/qt/lib/QtCore.framework/Headers/QVector"
+#include "../../../../../../../usr/local/opt/qt/lib/QtCore.framework/Headers/QTimer"
 
 #include <ogdf/basic/Graph.h>
 #include <ogdf/basic/GraphAttributes.h>

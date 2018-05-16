@@ -2,7 +2,7 @@
 // Created by jmeintrup on 08.05.18.
 //
 
-#include "sealib/graphio.h"
+#include "graphio.h"
 
 std::string Sealib::GraphIO::stringFromTrail(Sealib::Graph *g, Sealib::TrailStructure **trail) {
     std::string s = "\n";

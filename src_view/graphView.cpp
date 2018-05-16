@@ -32,7 +32,7 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QComboBox>
 #include <QtCore/QThread>
-#include <include/sealib/graphio.h>
+#include <src_view/graphio.h>
 
 #include "graphView.h"
 

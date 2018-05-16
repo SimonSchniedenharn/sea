@@ -3,7 +3,7 @@
 #include <ctime>
 #include <iostream>
 #include <include/sealib/graph.h>
-#include <include/sealib/graphio.h>
+#include <src_view/graphio.h>
 #include <include/sealib/rankselect.h>
 #include <include/sealib/graphalgorithms.h>
 

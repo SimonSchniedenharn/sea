@@ -6,7 +6,7 @@
 #define SEA_RANKSTRUCT_H
 #define CHECK_BIT(var,pos) (((var)>>(pos)) & 1)
 
-#include <sealib/dynamicbitsetextension.h>
+#include <boost/dynamic_bitset.hpp>
 
 /**
  * Space efficient RankStructure implementation.

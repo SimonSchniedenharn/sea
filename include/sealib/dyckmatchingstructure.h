@@ -5,7 +5,8 @@
 #ifndef SEA_DYCKMATCHINGSTRUCTURE_H
 #define SEA_DYCKMATCHINGSTRUCTURE_H
 
-#include <include/sealib/dynamicbitsetextension.h>
+#include <sealib/dynamicbitsetextension.h>
+#include <boost/dynamic_bitset.hpp>
 
 class DyckMatchingStructure {
 public:

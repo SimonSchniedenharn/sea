@@ -2,7 +2,8 @@
 // Created by jmeintrup on 12.05.18.
 //
 
-#include <include/sealib/dyckmatchingstructure.h>
+#include <sealib/dyckmatchingstructure.h>
+#include <boost/dynamic_bitset.hpp>
 
 unsigned long DyckMatchingStructure::findMatchNaive(boost::dynamic_bitset<> &word_, unsigned long idx) {
     unsigned int j = 0;

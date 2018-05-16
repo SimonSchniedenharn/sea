@@ -9,6 +9,7 @@
 #include <sealib/dynamicbitsetextension.h>
 #include "sealib/localdycktable.h"
 #include "sealib/simplerankselect.h"
+#include <boost/dynamic_bitset.hpp>
 
 /**
  * Space efficient TrailStructure.
