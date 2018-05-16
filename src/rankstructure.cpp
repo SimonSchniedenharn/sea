@@ -25,7 +25,7 @@ Sealib::RankStructure::RankStructure(const boost::dynamic_bitset<> &bitset_) {
     nonEmptySegments.reserve(segmentCount);
 
     for (unsigned int i = 0; i < segmentCount; i++) {
-        unsigned char rank = 0;
+        unsigned char srank = 0;
         std::vector<unsigned char> localRanks;
 
         localRanks.reserve(segmentLength);
@@ -35,11 +35,11 @@ Sealib::RankStructure::RankStructure(const boost::dynamic_bitset<> &bitset_) {
 
         for (unsigned char j = 0; j < segmentLength; j++) {
             if (CHECK_BIT(segment,j)) {
-                rank++;
+                srank++;
             }
-            localRanks.push_back(rank);
+            localRanks.push_back(srank);
         }
-        if (rank != 0) {
+        if (srank != 0) {
             nonEmptySegments.push_back(i);
         }
         localRankLookupTable.push_back(localRanks);
@@ -47,7 +47,7 @@ Sealib::RankStructure::RankStructure(const boost::dynamic_bitset<> &bitset_) {
 
 
     if (lastSeg != 0) {
-        unsigned char rank = 0;
+        unsigned char srank = 0;
 
         std::vector<unsigned char> localRanks;
 
@@ -59,11 +59,11 @@ Sealib::RankStructure::RankStructure(const boost::dynamic_bitset<> &bitset_) {
 
         for (unsigned char j = 0; j < lastSeg; j++) {
             if (CHECK_BIT(segment,j)) {
-                rank++;
+                srank++;
             }
-            localRanks.push_back(rank);
+            localRanks.push_back(srank);
         }
-        if(rank != 0) {
+        if(srank != 0) {
             nonEmptySegments.push_back(segmentCount);
         }
 
