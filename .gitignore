@@ -3,6 +3,7 @@
 # Files for Build System
 /.gradle
 
+third-party/
 CTestTestfile.cmake
 CMakeFiles/
 cmake_install.cmake

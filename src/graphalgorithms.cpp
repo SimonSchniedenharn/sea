@@ -4,7 +4,6 @@
 
 
 #include <cstdlib>
-#include <ogdf/basic/GraphAttributes.h>
 #include "sealib/graphalgorithms.h"
 
 Sealib::TrailStructure ** Sealib::GraphAlgorithms::hierholzer(Sealib::Graph *g) {
